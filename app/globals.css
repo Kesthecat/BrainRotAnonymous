@@ -1,26 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* --background: #ffffff;
-  --foreground: #171717; */
+  font-family: Inter, Poppins, Nunito Sans;
 }
 
 @theme inline {
-  /* --color-background: var(--background);
-  --color-foreground: var(--foreground); */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-white-background: #F5F3FF;
+  --color-purple-accent: #C4B5FD;
+  --color-purple-primary-light: #A78BFA;
+  --color-purple-primary: #8B5CF6;
+  --color-purple-text: #4C1D95;
+  --color-purple-heading: #2D1B57;
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
-    /* --background: #0a0a0a;
-    --foreground: #ededed; */
-  }
+  :root {}
 }
 
 body {
-  /* background: var(--background);
-  color: var(--foreground); */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, Poppins, Nunito Sans;
 }
