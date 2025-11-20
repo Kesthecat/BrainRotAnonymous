@@ -31,6 +31,7 @@ export default function Input({ instructions, placeholder, buttonLabel, isLoadin
         }
 
         setPrompt(trimmedMessage);
+        // console.log('CLICKED', message)
         setMessage("");
         setWordCount(0);
         if (textRef.current) {
@@ -50,55 +51,57 @@ export default function Input({ instructions, placeholder, buttonLabel, isLoadin
     }, [isLoading, message]);
 
     return (
-
-        <div className="w-full col-span-1">
-            <p className="text-purple-primary mb-6 leading-relaxed">{instructions}</p>
-            <FormControl className="flex gap-4 w-full">
-                <div>
-                    <TextField
-                        inputRef={textRef}
-                        multiline
-                        rows={4}
-                        fullWidth placeholder={placeholder}
-                        onChange={handleChange}
-                        disabled={isLoading}
-                        slotProps={{
-                            root: {
-                                sx: {
-                                    backgroundColor: "var(--color-white)",
-                                    borderRadius: '12px',
-                                    "& .MuiOutlinedInput-notchedOutline": {
-                                        border: "2px solid var(--color-purple-accent)"
+        <div className="flex items-center">
+            <div>
+                <p className="text-purple-primary mb-6 leading-relaxed">{instructions}</p>
+                <FormControl className="flex gap-4 w-full">
+                    <div>
+                        <TextField
+                            inputRef={textRef}
+                            multiline
+                            rows={4}
+                            fullWidth placeholder={placeholder}
+                            onChange={handleChange}
+                            disabled={isLoading}
+                            slotProps={{
+                                root: {
+                                    sx: {
+                                        backgroundColor: "var(--color-white)",
+                                        borderRadius: '12px',
+                                        "& .MuiOutlinedInput-notchedOutline": {
+                                            border: "2px solid var(--color-purple-accent)"
+                                        },
                                     },
                                 },
-                            },
-                        }}
-                    />
-                    <div className="flex justify-end " >
-                        <p className="text-xs text-purple-primary-light">{`${wordCount} / ${wordLimit}`}</p>
+                            }}
+                        />
+                        <div className="flex justify-end " >
+                            <p className="text-xs text-purple-primary-light">{`${wordCount} / ${wordLimit}`}</p>
+                        </div>
                     </div>
-                </div>
-                <Button
-                    variant="outlined"
-                    onClick={handleClick}
-                    disabled={wordCount === 0 || wordCount > wordLimit}
-                    loading={isLoading}
-                    sx={{
-                        backgroundColor: "var(--color-white)",
-                        borderColor: "var(--color-purple-accent)",
-                        borderWidth: '2px',
-                        color: "var(--color-purple-text)",
-                        height: '48px',
-                        marginBottom: '24px',
-                        borderRadius: '12px',
-                        "&:hover": {
-                            backgroundColor: "var(--color-purple-primary)",
-                            color: "var(--color-white-background)",
-                            opacity: 0.6,
-                        },
-                    }}
-                >{buttonLabel}</Button>
-            </FormControl>
+                </FormControl>
+            </div>
+            <Button
+                variant="outlined"
+                onClick={handleClick}
+                disabled={wordCount === 0 || wordCount > wordLimit}
+                loading={isLoading}
+                sx={{
+                    backgroundColor: "var(--color-white)",
+                    borderColor: "var(--color-purple-accent)",
+                    borderWidth: '2px',
+                    color: "var(--color-purple-text)",
+                    height: '48px',
+                    marginBottom: '24px',
+                    marginLeft: '48px',
+                    borderRadius: '12px',
+                    "&:hover": {
+                        backgroundColor: "var(--color-purple-primary)",
+                        color: "var(--color-white-background)",
+                        opacity: 0.6,
+                    },
+                }}
+            >{buttonLabel}</Button>
         </div>
     )
 }

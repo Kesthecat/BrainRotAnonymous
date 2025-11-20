@@ -15,6 +15,7 @@ export async function POST(request: NextRequest) {
 
     let prompt: string | undefined;
     let systemPrompt: string | undefined;
+    let systemModel: string | undefined;
 
     try {
         const body = await request.json();
@@ -23,6 +24,9 @@ export async function POST(request: NextRequest) {
         }
         if (typeof body?.system_prompt === "string") {
             systemPrompt = body.system_prompt.trim();
+        }
+        if (typeof body?.system_model === "string") {
+            systemModel = body.system_model.trim();
         }
     } catch {
         return NextResponse.json({ error: "Request body must be valid JSON." }, { status: 400 });
@@ -39,7 +43,7 @@ export async function POST(request: NextRequest) {
 
     try {
         const response = await client.responses.create({
-            model: DEFAULT_MODEL,
+            model: systemModel ?? DEFAULT_MODEL,
             input: [
                 { role: "assistant", content: systemPrompt },
                 { role: "user", content: prompt },

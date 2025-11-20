@@ -52,7 +52,7 @@ export default function RecipeList({ isLoading, response, error, ingredientPromp
                     <li key={recipe.title} className="rounded-lg border border-purple-accent p-3 flex flex-col gap-1">
                         <h4 className="font-semibold text-purple-primary">{recipe.title}</h4>
                         <p className="text-sm text-purple-text">{recipe.description}</p>
-                        {/* <div className="flex justify-end"><a href={recipe.href} target="_blank"><p className="text-xs text-purple-primary-light">Go to Recipe</p></a></div> */}
+                        <div className="flex justify-end"><a href={recipe.url} target="_blank"><p className="text-xs text-purple-primary-light">Go to Recipe</p></a></div>
                     </li>
                 ))}
             </ul>

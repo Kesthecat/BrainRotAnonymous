@@ -25,14 +25,14 @@ const links: Link[] = [
         name: 'What to Clean',
         href: '/cleaning'
     },
-    {
-        name: 'Leader board',
-        href: '/'
-    },
-    {
-        name: 'About',
-        href: '/about'
-    }
+    // {
+    //     name: 'Leader board',
+    //     href: '/'
+    // },
+    // {
+    //     name: 'About',
+    //     href: '/about'
+    // }
 ]
 
 export default function NavLinks() {
