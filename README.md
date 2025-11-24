@@ -11,6 +11,4 @@ It has cost 0.06$ in OpenAI token (API calls excluding Codex usage) to complete 
 
 Please go to https://youtu.be/Wj5gCqz69nE to see a demo!
 
-<img width="1523" height="1343" alt="Screenshot 2025-11-24 at 1 43 24 PM" src="https://github.com/user-attachments/assets/38f8125e-a1cc-469b-b249-ca959d8693df" />
-
-
+<img width="1552" height="1282" alt="Screenshot 2025-11-24 at 2 53 57 PM" src="https://github.com/user-attachments/assets/fd0cb579-375b-4fb0-b19e-9e62bff5f95f" />
