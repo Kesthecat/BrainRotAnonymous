@@ -1,7 +1,7 @@
 This is a project to explore OpenAI, Next.js and Tailwind. I also used Codex as my AI assistant. 
 I'm using each page to compare OpenAI models on how they handle a task. 
 
-## Reci
+## Recipe
 
 This page allows the user to enter a list of ingredients and 3 recipes idea will be generated. The base prompt for each model is to :
 - First check for any inedible ingredients. If there is inedible ingredients, it should throw an error. 
